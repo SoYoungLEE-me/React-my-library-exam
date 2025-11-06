@@ -10,7 +10,9 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">코딩 알려주는 누나 도서관</div>
+      <div className="logo" onClick={goToHome}>
+        코딩 알려주는 누나 도서관
+      </div>
       <div className="menu">
         <div onClick={goToHome}>메인</div>
         <div>나의 책</div>

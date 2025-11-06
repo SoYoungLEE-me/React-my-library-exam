@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-around;
   padding: 1rem 0px;
+  cursor: pointer;
 }
 
 .navbar .logo {
@@ -72,6 +73,11 @@
   border: solid 1px #1b4711;
 }
 
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
 .book-card img {
   width: 100%;
   border-radius: 10px 10px 0 0;
@@ -82,6 +88,12 @@
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  display: block;
+  padding: 10px;
 }
 
 .book-card p {
@@ -91,4 +103,5 @@
   width: 100%;
   display: block;
   white-space: nowrap;
+  padding: 5px;
 }

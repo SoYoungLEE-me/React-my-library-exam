@@ -63,7 +63,7 @@ const MainPage = () => {
             </div>
           ) : isError ? (
             <div className="text-center mt-5 text-danger">{error.message}</div>
-          ) : (
+          ) : data.length > 0 ? (
             <Row xs={2} md={3} lg={4} xxl={5} className="g-4">
               {data?.map((item) => (
                 <Col key={item.key}>
@@ -71,6 +71,17 @@ const MainPage = () => {
                 </Col>
               ))}
             </Row>
+          ) : (
+            <div
+              style={{
+                textAlign: "center",
+                marginTop: "100px",
+                fontSize: "18px",
+                color: "#555",
+              }}
+            >
+              검색 결과가 없습니다.
+            </div>
           )}
         </Container>
       </main>
